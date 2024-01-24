@@ -10,8 +10,8 @@ void mx_print_alphabet(void)
     {
         symbol += 32*k;
         mx_printchar(symbol);
-        //printf("%c", symbol);
         k*=-1;
         symbol++;
     }
+    mx_printchar('\n');
 }

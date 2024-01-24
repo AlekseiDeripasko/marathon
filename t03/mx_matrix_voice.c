@@ -2,11 +2,6 @@
 
 void mx_matrix_voice(void)
 {
-    write(1, "\7\n", 2); //???
+    write(1, "\7", 1); //???
 }
 
-/*int main()
-{
-	mx_matrix_voice();
-    return 0;
-}*/
