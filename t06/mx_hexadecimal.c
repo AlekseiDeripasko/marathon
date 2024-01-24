@@ -10,7 +10,7 @@ void mx_hexadecimal(void)
     }
     for (int j = 65; j < 71; j++)
     {
-        mx_printchar(i);
+        mx_printchar(j);
     }
     mx_printchar('\n');
 }

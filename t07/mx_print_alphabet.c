@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 void mx_printchar(char c);
 
 void mx_print_alphabet(void)
