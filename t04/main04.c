@@ -6,7 +6,7 @@ void mx_printchar(char c)
     write(1, symbol, 1);
 }
 
-int main()
+int main(void)
 {
 	mx_printchar(97);
     write(1, "\n", 1);

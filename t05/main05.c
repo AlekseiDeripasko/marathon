@@ -11,7 +11,7 @@ void mx_only_printable(void)
     mx_printchar('\n');
 }
 
-int main()
+int main(void)
 {
     mx_only_printable();
 }

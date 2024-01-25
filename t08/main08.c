@@ -11,7 +11,7 @@ int mx_strlen(const char *s)
     return i;
 }
 
-int main()
+int main(void)
 {
     printf("%i\n",mx_strlen("Hello"));
 }

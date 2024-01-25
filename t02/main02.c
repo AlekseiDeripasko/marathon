@@ -7,7 +7,7 @@ void mx_write_knock_knock(void)
     write(1, str, strlen(str));
 }
 
-int main()
+int main(void)
 {
 	mx_write_knock_knock();
     return 0;

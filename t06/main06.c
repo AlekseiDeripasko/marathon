@@ -15,7 +15,7 @@ void mx_hexadecimal(void)
     mx_printchar('\n');
 }
 
-int main()
+int main(void)
 {
     mx_hexadecimal();
 }
