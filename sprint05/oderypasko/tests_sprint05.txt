@@ -1,0 +1,171 @@
+t00: +
+t01: +
+t02: + (need more testing)
+t03: + (need more testing)
+t04: +
+t05: +
+t06: +
+t07: +
+t08: + (limit double, negative pow -> segmentation fault)
+t09: -----
+t10: +? (what about zero)
+t11: +? (what about zero)
+
+t00
+
+clang -std=c11 -Wall -Wextra -Werror -Wpedantic -o mx_print_name mx_print_name.c mx_printchar.c mx_printint.c mx_printstr.c mx_strlen.c
+
+command: ./mx_print_name 15 65 "Hello World" 0987 a b
+result : ./mx_print_name
+         7
+
+command: ./mx_print_name "This is a long sentence" with spaces
+result : ./mx_print_name
+         4
+
+command: ./mx_print_name 1 2 3 4 5
+result : ./mx_print_name
+         6
+_________________________
+
+clang -std=c11 -Wall -Wextra -Werror -Wpedantic -o mx_print_args mx_print_args.c mx_printchar.c mx_printstr.c mx_strlen.c
+
+t01
+
+command: ./mx_print_args Follow the white rabbit
+result : Follow
+         the 
+         white 
+         rabbit
+
+command: ./mx_print_args 1 2 3 4 5
+result : 1
+         2
+         3
+         4
+         5
+_________________________
+
+clang -std=c11 -Wall -Wextra -Werror -Wpedantic -o mx_print_sargs mx_print_sargs.c mx_printchar.c mx_printstr.c mx_strlen.c mx_strcmp.c 
+
+t02:
+
+command: ./mx_print_sargs Follow the white rabbit
+result : Follow
+         rabbit
+         the
+         white
+
+command: ./mx_print_sargs 1 2 3 4 5
+result : 1
+         2
+         3
+         4
+         5
+
+command: ./mx_print_sargs 5 67 123 34 5
+result : 123
+         34
+         5
+         5
+         67
+_________________________
+
+clang -std=c11 -Wall -Wextra -Werror -Wpedantic -o mx_sum_args mx_sum_args.c mx_printint.c mx_printchar.c mx_isspace.c mx_isdigit.c mx_atoi.c
+
+t03
+
+command: ./mx_sum_args 1- -7
+result : -7
+
+command: ./mx_sum_args a1 b 2 c-
+result : 2
+
+command: ./mx_sum_args 1 +2 -3 +-4 5+ 6at "  7"
+result : 0
+_________________________
+
+clang -std=c11 -Wall -Wextra -Werror -Wpedantic -o mx_print_pname mx_print_pname.c mx_printchar.c mx_printstr.c mx_strchr.c mx_strlen.c 
+
+t04
+
+command: ./mx_print_pname 
+result : mx_print_pname 
+
+command: ~/Documents/sprint05/oderypasko/t04/mx_print_pname
+result : mx_print_pname 
+
+_________________________
+
+
+
+t05
+_________________________
+
+clang -std=c11 -Wall -Wextra -Werror -Wpedantic -o main06 main06.c mx_factorial_iter.c
+clang -std=c11 -Wall -Wextra -Werror -Wpedantic -o main07 main07.c mx_factorial_rec.c
+
+t06/t07:
+
+input: -5
+result: 0
+
+input: 0:
+result: 1
+
+input: 1
+result: 1
+
+input: 2
+result: 2
+
+input: 3
+result: 6
+
+input: 5
+result 120
+
+input: 10
+result: 3628800
+
+input: 12
+result: 479001600
+
+input: 13
+result: 0
+
+input: 12123324
+result: 0
+_________________________
+
+clang -std=c11 -Wall -Wextra -Werror -Wpedantic -o main08 main08.c mx_pow_rec.c
+
+t08
+
+input: 0, 0
+result: 1
+
+input: -1, 0
+result: 1
+
+input: -2, 3
+result: -8
+
+_________________________
+
+t09
+
+
+_________________________
+
+clang -std=c11 -Wall -Wextra -Werror -Wpedantic -o main10 main10.c mx_gcd.c 
+t10
+
+
+_________________________
+
+t11
+clang -std=c11 -Wall -Wextra -Werror -Wpedantic -o main11 main11.c mx_gcd.c mx_lcm.c
+
+_________________________
+
